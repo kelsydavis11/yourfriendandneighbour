@@ -4,18 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Your Friend & Neighbour</title>
-  <meta name="description" content="Stay somewhere lovely. Know where to go. Sydney stays, local recommendations and guest perks.">
+  <meta name="description" content="Two Sydney stays, local favourites and better direct rates for returning guests.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Junicode:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="home-page">
+<body class="home-page public-home">
   <header class="site-header">
     <a class="brand" href="index.html">Your Friend <span>&amp;</span> Neighbour</a>
     <nav aria-label="Primary navigation">
-      <a href="#stays">Stays</a>
-      <a href="#guest-guide">Guest guide</a>
+      <a href="#stays">Our stays</a>
       <a href="#eat-drink">Eat &amp; drink</a>
       <a href="#perks">Friend perks</a>
       <a class="nav-cta" href="#friend">Become a friend</a>
@@ -23,76 +22,62 @@
   </header>
 
   <main>
-    <section class="hero home-hero" aria-label="Your Friend and Neighbour introduction">
-      <img src="IMG_4740.jpg" alt="#17 on Victoria apartment in Darlinghurst" class="hero-image">
-      <div class="hero-wash"></div>
-      <div class="hero-content">
-        <p class="eyebrow light">Sydney, shared by your friend &amp; neighbour</p>
+    <section class="public-hero">
+      <div class="public-hero-copy">
+        <p class="eyebrow">Sydney, shared by your friend &amp; neighbour</p>
         <h1>Stay somewhere lovely.<br>Know where to go.</h1>
-        <p class="hero-copy">Two inner-city Sydney stays, plus the places, shortcuts and local favourites we'd share with friends.</p>
-        <a class="text-link light-link" href="#stays">Explore our stays <span>↓</span></a>
+        <p>Two inner-city Sydney stays, plus the places and local favourites we'd share with friends.</p>
+        <a class="text-link" href="#stays">See our stays <span>↓</span></a>
+      </div>
+      <div class="public-hero-image">
+        <img src="IMG_4740.jpg" alt="#17 on Victoria apartment in Darlinghurst">
       </div>
     </section>
 
-    <section id="stays" class="editorial-section stays-section">
-      <div class="section-intro">
-        <p class="eyebrow">Our stays</p>
+    <section id="stays" class="home-stays">
+      <div class="section-intro narrow">
+        <p class="eyebrow">Stay with us</p>
         <h2>Two neighbourhoods.<br>One local welcome.</h2>
       </div>
 
-      <div class="stay-feature stay-feature-primary">
-        <a class="stay-image-link" href="darlinghurst.html" aria-label="Explore #17 on Victoria">
-          <img src="IMG_4740.jpg" alt="#17 on Victoria in Darlinghurst">
-        </a>
-        <div class="stay-copy">
-          <p class="eyebrow">Darlinghurst</p>
-          <h3>#17 on Victoria</h3>
-          <p>Skyline views, a brilliant inner-city location and the kind of place that makes staying in feel just as good as going out.</p>
-          <a class="text-link" href="darlinghurst.html">Explore #17 on Victoria <span>→</span></a>
-        </div>
-      </div>
+      <div class="stay-card-grid">
+        <article class="stay-card">
+          <a href="darlinghurst.html" class="stay-card-image"><img src="IMG_4740.jpg" alt="#17 on Victoria in Darlinghurst"></a>
+          <div class="stay-card-copy">
+            <p class="eyebrow">Darlinghurst</p>
+            <h3>#17 on Victoria</h3>
+            <p>Skyline views, a brilliant inner-city location and some of our favourite places to eat and drink just outside the door.</p>
+            <a class="text-link" href="darlinghurst.html">View #17 on Victoria <span>→</span></a>
+          </div>
+        </article>
 
-      <div class="stay-feature stay-feature-secondary">
-        <div class="stay-placeholder" aria-label="Excelsior on Elizabeth photography coming soon">
-          <span>Excelsior on Elizabeth</span>
-          <small>Surry Hills photography coming next</small>
-        </div>
-        <div class="stay-copy">
-          <p class="eyebrow">Surry Hills</p>
-          <h3>Excelsior on Elizabeth</h3>
-          <p>A relaxed Surry Hills base close to Central, neighbourhood cafés and some of our favourite places to eat and drink.</p>
-          <a class="text-link" href="surry-hills.html">Explore Excelsior on Elizabeth <span>→</span></a>
-        </div>
+        <article class="stay-card">
+          <a href="surry-hills.html" class="stay-card-placeholder"><span>Excelsior on Elizabeth</span><small>Surry Hills photography coming next</small></a>
+          <div class="stay-card-copy">
+            <p class="eyebrow">Surry Hills</p>
+            <h3>Excelsior on Elizabeth</h3>
+            <p>A relaxed Surry Hills base close to Central, neighbourhood cafés and some of our favourite local spots.</p>
+            <a class="text-link" href="surry-hills.html">View Excelsior on Elizabeth <span>→</span></a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="lifestyle-banner">
-      <img src="C7841979-921F-47F2-8F45-4A4DB99D5DA3.jpg" alt="A glass of wine by the Darlinghurst apartment window overlooking Sydney">
-      <div class="lifestyle-copy">
-        <p>We share more than<br>a place to stay.</p>
-        <em>Here's the Sydney we'd show our friends.</em>
+    <section class="lifestyle-split">
+      <div class="lifestyle-photo"><img src="C7841979-921F-47F2-8F45-4A4DB99D5DA3.jpg" alt="A glass of wine by the Darlinghurst apartment window overlooking Sydney"></div>
+      <div class="lifestyle-text">
+        <p class="eyebrow">Our Sydney</p>
+        <h2>We share more than a place to stay.</h2>
+        <p>We share the places we'd actually take our friends — morning coffee, long lunches, wine bars, late nights and what to do when Sydney turns on the rain.</p>
+        <a class="text-link" href="#eat-drink">See our favourites <span>→</span></a>
       </div>
     </section>
 
-    <section id="guest-guide" class="useful-section">
-      <div class="section-intro compact">
-        <p class="eyebrow">Staying with us?</p>
-        <h2>Everything you need,<br>easy to find.</h2>
-        <p class="supporting-copy">Each apartment has its own guest guide with the practical stuff first — WiFi, TV, check-out, appliances and house details — then the fun stuff.</p>
-      </div>
-      <div class="utility-links">
-        <a href="darlinghurst.html#wifi"><span>01</span><strong>WiFi</strong><small>Connect in seconds</small></a>
-        <a href="darlinghurst.html#apartment"><span>02</span><strong>Apartment guide</strong><small>TV, appliances, check-out &amp; more</small></a>
-        <a href="#eat-drink"><span>03</span><strong>Eat &amp; drink</strong><small>Our actual favourites</small></a>
-        <a href="#perks"><span>04</span><strong>Friend perks</strong><small>EatClub, DoorDash &amp; more</small></a>
-      </div>
-    </section>
-
-    <section id="eat-drink" class="recommend-section">
+    <section id="eat-drink" class="recommend-section public-recommend">
       <div class="today-block">
         <p class="eyebrow">Today we'd…</p>
-        <h2>Pick somewhere from<br>our little black book.</h2>
-        <p>Eventually this section will adapt to the weather and time of day, but every suggestion will come only from places we personally recommend.</p>
+        <h2>Start with the places we already love.</h2>
+        <p>Weather and time-of-day suggestions will always be selected from our own recommendation list — never random tourist picks.</p>
       </div>
       <div class="recommend-list">
         <a href="#"><span>Coffee</span><strong>Morning favourites</strong><small>Good coffee, no tourist traps.</small></a>
@@ -110,7 +95,7 @@
       <div class="perk-actions">
         <a href="#">EatClub offer <span>→</span></a>
         <a href="#">DoorDash referral <span>→</span></a>
-        <a href="#friend">Returning guest rates <span>→</span></a>
+        <a href="#friend">Guaranteed better direct rates <span>→</span></a>
       </div>
     </section>
 
@@ -118,7 +103,7 @@
       <div class="friend-copy">
         <p class="eyebrow">Become a friend</p>
         <h2>Come back anytime.</h2>
-        <p>Once you've stayed with us, you're a friend. Friends get our best direct rates, first access when dates open up and the occasional Sydney recommendation.</p>
+        <p>Once you've stayed with us, you're a friend. Book direct next time for guaranteed better rates than the major booking platforms, plus first access when dates open up.</p>
       </div>
       <form class="friend-form">
         <label>First name<input type="text" placeholder="Alex"></label>
@@ -132,12 +117,7 @@
 
   <footer>
     <div class="footer-brand">Your Friend <span>&amp;</span> Neighbour</div>
-    <div class="footer-links">
-      <a href="#stays">Stays</a>
-      <a href="#guest-guide">Guest guide</a>
-      <a href="#eat-drink">Eat &amp; drink</a>
-      <a href="#friend">Become a friend</a>
-    </div>
+    <div class="footer-links"><a href="#stays">Our stays</a><a href="#eat-drink">Eat &amp; drink</a><a href="#friend">Become a friend</a></div>
     <p>Sydney, Australia</p>
   </footer>
 </body>
