@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="home-page">
+  <a class="promo-bar" href="#perks" aria-label="See our favourite Sydney dining hack">
+    <span>Our all-time favourite Sydney hack:</span>
+    <strong>up to 50% off some of the best restaurants &amp; bars</strong>
+    <span class="promo-link">Get it here →</span>
+  </a>
+
   <header class="site-header">
     <a class="brand" href="index.html">Your Friend <span>&amp;</span> Neighbour</a>
     <nav aria-label="Primary navigation">
@@ -39,7 +45,7 @@
         <h2>Two neighbourhoods.<br>One local welcome.</h2>
       </div>
 
-      <div class="stay-cards">
+      <div class="stay-cards hoxton-cards">
         <article class="stay-card">
           <a href="darlinghurst.html" class="stay-card-image" aria-label="Explore #17 on Victoria">
             <img src="IMG_4740.jpg" alt="#17 on Victoria in Darlinghurst">
@@ -53,7 +59,7 @@
         </article>
 
         <article class="stay-card">
-          <a href="surry-hills.html" class="stay-card-image" aria-label="Explore Excelsior on Elizabeth">
+          <a href="surry-hills.html" class="stay-card-image surry-card-image" aria-label="Explore Excelsior on Elizabeth">
             <img src="846462E8-7C38-439E-BA54-2A30A4B643D7.jpg" alt="Excelsior on Elizabeth in Surry Hills">
           </a>
           <div class="stay-card-copy">
@@ -94,7 +100,7 @@
         <h2>A few useful extras.</h2>
       </div>
       <div class="perk-actions">
-        <a href="#">EatClub offer <span>→</span></a>
+        <a href="#">EatClub — up to 50% off selected venues <span>→</span></a>
         <a href="#">DoorDash referral <span>→</span></a>
         <a href="#friend">Returning guest rates <span>→</span></a>
       </div>
@@ -125,5 +131,31 @@
     </div>
     <p>Sydney, Australia</p>
   </footer>
+
+  <aside class="friend-popover" id="friend-popover" aria-label="Returning guest offer" aria-live="polite">
+    <button class="popover-close" type="button" aria-label="Close">×</button>
+    <p class="eyebrow">Stay with a friend next time</p>
+    <h3>Get our better direct rate.</h3>
+    <p>Leave your details and we'll send you the direct-booking link for next time — with a guaranteed better rate than the booking platforms.</p>
+    <form class="popover-form">
+      <label>First name<input type="text" placeholder="Alex"></label>
+      <label>Email address<input type="email" placeholder="alex@example.com"></label>
+      <label class="checkbox"><input type="checkbox"> <span>I'd like to receive future stay offers and local recommendations.</span></label>
+      <button type="button">Send me the link</button>
+    </form>
+  </aside>
+
+  <script>
+    const popover = document.getElementById('friend-popover');
+    const closeButton = popover.querySelector('.popover-close');
+    const dismissed = sessionStorage.getItem('friendPopoverDismissed');
+    if (!dismissed) {
+      window.setTimeout(() => popover.classList.add('show'), 5000);
+    }
+    closeButton.addEventListener('click', () => {
+      popover.classList.remove('show');
+      sessionStorage.setItem('friendPopoverDismissed', '1');
+    });
+  </script>
 </body>
 </html>
