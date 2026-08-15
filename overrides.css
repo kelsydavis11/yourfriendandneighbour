@@ -1,6 +1,7 @@
 /* Latest design refinements */
 :root {
-  --rose-soft: #efd8d1;
+  --promo-green: #d9e2d4;
+  --promo-green-deep: #68755f;
 }
 
 /* Keep photography natural and editorial through layout/crop, not greying it out */
@@ -18,10 +19,11 @@
   background: linear-gradient(90deg, rgba(36,31,29,.40), rgba(36,31,29,.08) 68%) !important;
 }
 
-/* Make EatClub promotion clearer while keeping it on-brand */
+/* EatClub promotion: soft eucalyptus green pulled from the apartment greenery */
 .promo-bar {
-  background: var(--rose-soft) !important;
-  border-bottom: 1.5px solid #292523 !important;
+  background: var(--promo-green) !important;
+  color: #263024 !important;
+  border-bottom: 1.5px solid #263024 !important;
   box-shadow: none !important;
   font-size: .76rem !important;
   padding-top: 10px !important;
@@ -31,11 +33,18 @@
   font-weight: 500 !important;
 }
 .promo-kicker {
+  color: #4f5e49 !important;
   font-weight: 500 !important;
 }
 .promo-link {
+  color: #263024 !important;
   font-weight: 500 !important;
   border-bottom-width: 1.5px !important;
+}
+
+/* Bring the same green through sparingly so the promo feels intentional, not bolted on */
+.perks-strip {
+  background: var(--promo-green-deep) !important;
 }
 
 /* Manual content cards */
