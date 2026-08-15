@@ -3,32 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Excelsior Retreat | Your Friend & Neighbour</title>
+  <title>Excelsior on Elizabeth | Your Friend & Neighbour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Junicode:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="site-header">
+<body class="guest-page">
+  <a class="promo-bar" href="#perks">
+    <span class="promo-kicker">OUR FAVOURITE SYDNEY HACK</span>
+    <strong>Up to 50% off some of Sydney's best restaurants &amp; bars</strong>
+    <span class="promo-link">Get EatClub →</span>
+  </a>
+
+  <header class="site-header guest-header">
     <a class="brand" href="index.html">Your Friend <span>&amp;</span> Neighbour</a>
-    <nav><a href="index.html#stays">Both stays</a><a href="#guide">Local guide</a></nav>
+    <nav aria-label="Guest navigation">
+      <a href="#wifi">WiFi</a>
+      <a href="#house-manual">House manual &amp; FAQ</a>
+      <a href="#guide">Eat &amp; drink</a>
+      <a href="#perks">Friend perks</a>
+      <a class="nav-cta" href="index.html#friend">Stay again</a>
+    </nav>
   </header>
 
   <main>
-    <section class="property-hero">
-      <p class="eyebrow">Surry Hills</p>
-      <h1>The Excelsior Retreat</h1>
-      <p>A bright, comfortable base for exploring one of Sydney’s best food and culture neighbourhoods.</p>
+    <section class="guest-property-hero">
+      <img src="846462E8-7C38-439E-BA54-2A30A4B643D7.jpg" alt="Excelsior on Elizabeth apartment in Surry Hills">
+      <div class="guest-property-wash"></div>
+      <div class="guest-property-copy">
+        <p class="eyebrow light">Surry Hills</p>
+        <h1>Excelsior on Elizabeth</h1>
+        <p>Welcome. Everything you need for your stay, plus our favourite places nearby.</p>
+      </div>
     </section>
 
     <section class="guest-panel">
       <div>
         <p class="eyebrow">During your stay</p>
-        <h2>Everything you need, in one place.</h2>
+        <h2>Everything you need,<br>easy to find.</h2>
       </div>
       <div class="quick-links">
-        <a href="#wifi">WiFi</a>
-        <a href="#guide">Local favourites</a>
-        <a href="#perks">Guest perks</a>
-        <a href="index.html#friend">Stay again</a>
+        <a href="#wifi"><span>01</span><strong>WiFi</strong><small>Connect first</small></a>
+        <a href="#house-manual"><span>02</span><strong>House manual &amp; FAQ</strong><small>TV, building, appliances &amp; more</small></a>
+        <a href="#guide"><span>03</span><strong>Eat &amp; drink</strong><small>Our actual favourites</small></a>
+        <a href="#perks"><span>04</span><strong>Friend perks</strong><small>EatClub, DoorDash &amp; stay again</small></a>
       </div>
     </section>
 
@@ -38,6 +57,22 @@
       <div class="wifi-details">
         <p><span>Network</span><strong>ADD NETWORK NAME</strong></p>
         <p><span>Password</span><strong>ADD PASSWORD</strong></p>
+      </div>
+    </section>
+
+    <section id="house-manual" class="section house-manual-section">
+      <div class="section-intro narrow">
+        <p class="eyebrow">House manual &amp; FAQ</p>
+        <h2>The practical stuff.</h2>
+        <p>We'll fill this from your Airbnb house manual next. The structure is ready for the questions guests ask most often.</p>
+      </div>
+      <div class="manual-grid">
+        <a href="#"><span>TV &amp; streaming</span><small>How to use the TV and Chromecast</small></a>
+        <a href="#"><span>Building facilities</span><small>Access, shared areas and building information</small></a>
+        <a href="#"><span>Air conditioning</span><small>Controls and settings</small></a>
+        <a href="#"><span>Laundry &amp; appliances</span><small>Washing machine, dishwasher &amp; kitchen</small></a>
+        <a href="#"><span>Check-out</span><small>What to do before you leave</small></a>
+        <a href="#"><span>Something else?</span><small>Common questions and how to reach us</small></a>
       </div>
     </section>
 
@@ -55,16 +90,17 @@
       <p class="eyebrow">Friend perks</p>
       <h2>A few useful extras</h2>
       <div class="perk-links">
-        <a href="#">EatClub offer →</a>
+        <a href="#">EatClub — up to 50% off →</a>
         <a href="#">DoorDash referral →</a>
-        <a href="index.html#friend">Become a friend →</a>
+        <a href="index.html#friend">Become a friend &amp; stay direct →</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Your Friend &amp; Neighbour</p>
+    <div class="footer-brand">Your Friend <span>&amp;</span> Neighbour</div>
     <p><a href="index.html">View both apartments</a></p>
+    <p>Sydney, Australia</p>
   </footer>
 </body>
 </html>
