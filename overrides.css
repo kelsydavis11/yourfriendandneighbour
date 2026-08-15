@@ -15,42 +15,47 @@
   display: none !important;
 }
 
-/* Homepage hero: no colour fade, only a subtle left-side shadow for legibility. */
+/* Homepage hero: natural photo, with only a soft shadow behind the type. */
 .hero-wash {
   background: linear-gradient(
     90deg,
-    rgba(28,26,24,.34) 0%,
-    rgba(28,26,24,.18) 24%,
-    rgba(28,26,24,.06) 44%,
+    rgba(28,26,24,.30) 0%,
+    rgba(28,26,24,.14) 27%,
+    rgba(28,26,24,.04) 46%,
     rgba(28,26,24,0) 62%
   ) !important;
 }
+
+/* Cleaner editorial hero typography: keep Junicode, but smaller, wider and calmer. */
 .home-hero .hero-content {
   color: white !important;
-  max-width: 500px !important;
-  padding-top: 7.5vh !important;
-  padding-bottom: 5vh !important;
+  max-width: 720px !important;
+  padding-top: 8vh !important;
+  padding-bottom: 5.5vh !important;
 }
 .home-hero .eyebrow.light {
-  color: rgba(255,255,255,.92) !important;
-  margin-bottom: 16px !important;
+  color: rgba(255,255,255,.94) !important;
+  margin-bottom: 20px !important;
+  font-size: .60rem !important;
+  letter-spacing: .18em !important;
 }
 .home-hero h1 {
-  font-size: clamp(3.25rem, 4.8vw, 4.85rem) !important;
-  line-height: .98 !important;
-  max-width: 470px !important;
-  letter-spacing: -.018em !important;
+  font-size: clamp(2.8rem, 3.7vw, 3.7rem) !important;
+  line-height: 1.03 !important;
+  max-width: 690px !important;
+  letter-spacing: -.012em !important;
+  font-weight: 400 !important;
 }
 .home-hero .hero-copy {
-  max-width: 430px !important;
-  margin-top: 16px !important;
-  margin-bottom: 18px !important;
-  font-size: .92rem !important;
-  line-height: 1.58 !important;
+  max-width: 390px !important;
+  margin-top: 22px !important;
+  margin-bottom: 22px !important;
+  font-size: .86rem !important;
+  line-height: 1.62 !important;
 }
 .home-hero .light-link {
   color: white !important;
-  font-size: .8rem !important;
+  font-size: .76rem !important;
 }
 
 /* Guest-property heroes keep the image natural, with only enough darkening for white type. */
@@ -118,29 +123,32 @@
 
 @media (max-width: 900px) {
   .manual-content-grid { grid-template-columns: 1fr 1fr; }
+  .home-hero .hero-content { max-width: 620px !important; }
+  .home-hero h1 { max-width: 600px !important; }
 }
 
 @media (max-width: 680px) {
   .manual-content-grid { grid-template-columns: 1fr; }
   .promo-bar { font-size: .68rem !important; }
   .home-hero .hero-content {
-    max-width: 78% !important;
+    max-width: 82% !important;
     padding-top: 7vh !important;
   }
   .home-hero h1 {
-    font-size: clamp(2.7rem, 10vw, 3.8rem) !important;
-    max-width: 360px !important;
+    font-size: clamp(2.35rem, 9.2vw, 3.1rem) !important;
+    max-width: 390px !important;
+    line-height: 1.02 !important;
   }
   .home-hero .hero-copy {
-    max-width: 340px !important;
-    font-size: .88rem !important;
+    max-width: 330px !important;
+    font-size: .84rem !important;
   }
   .hero-wash {
     background: linear-gradient(
       90deg,
-      rgba(28,26,24,.30) 0%,
-      rgba(28,26,24,.14) 34%,
-      rgba(28,26,24,0) 70%
+      rgba(28,26,24,.28) 0%,
+      rgba(28,26,24,.12) 35%,
+      rgba(28,26,24,0) 72%
     ) !important;
   }
 }
