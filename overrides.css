@@ -3,10 +3,9 @@
   --promo-green: #b7c3ae;
   --promo-green-deep: #68755f;
   --promo-green-text: #2f3a2d;
-  --hero-ivory: 246, 244, 239;
 }
 
-/* Keep the real photography untouched. The editorial effect is only an overlay. */
+/* Keep all apartment photography fully natural. */
 .editorial-image,
 .guest-property-hero img {
   filter: none !important;
@@ -16,26 +15,42 @@
   display: none !important;
 }
 
-/* Homepage hero: subtle ivory veil on the left, fading fully away by the right. */
+/* Homepage hero: no colour fade, only a subtle left-side shadow for legibility. */
 .hero-wash {
   background: linear-gradient(
     90deg,
-    rgba(var(--hero-ivory), .62) 0%,
-    rgba(var(--hero-ivory), .50) 15%,
-    rgba(var(--hero-ivory), .28) 29%,
-    rgba(var(--hero-ivory), .11) 42%,
-    rgba(var(--hero-ivory), .025) 54%,
-    rgba(var(--hero-ivory), 0) 64%
+    rgba(28,26,24,.34) 0%,
+    rgba(28,26,24,.18) 24%,
+    rgba(28,26,24,.06) 44%,
+    rgba(28,26,24,0) 62%
   ) !important;
 }
 .home-hero .hero-content {
-  color: var(--ink) !important;
+  color: white !important;
+  max-width: 500px !important;
+  padding-top: 7.5vh !important;
+  padding-bottom: 5vh !important;
 }
 .home-hero .eyebrow.light {
-  color: var(--ink) !important;
+  color: rgba(255,255,255,.92) !important;
+  margin-bottom: 16px !important;
+}
+.home-hero h1 {
+  font-size: clamp(3.25rem, 4.8vw, 4.85rem) !important;
+  line-height: .98 !important;
+  max-width: 470px !important;
+  letter-spacing: -.018em !important;
+}
+.home-hero .hero-copy {
+  max-width: 430px !important;
+  margin-top: 16px !important;
+  margin-bottom: 18px !important;
+  font-size: .92rem !important;
+  line-height: 1.58 !important;
 }
 .home-hero .light-link {
-  color: var(--ink) !important;
+  color: white !important;
+  font-size: .8rem !important;
 }
 
 /* Guest-property heroes keep the image natural, with only enough darkening for white type. */
@@ -108,15 +123,24 @@
 @media (max-width: 680px) {
   .manual-content-grid { grid-template-columns: 1fr; }
   .promo-bar { font-size: .68rem !important; }
-
-  /* On mobile the veil remains light and ends early so the apartment still reads clearly. */
+  .home-hero .hero-content {
+    max-width: 78% !important;
+    padding-top: 7vh !important;
+  }
+  .home-hero h1 {
+    font-size: clamp(2.7rem, 10vw, 3.8rem) !important;
+    max-width: 360px !important;
+  }
+  .home-hero .hero-copy {
+    max-width: 340px !important;
+    font-size: .88rem !important;
+  }
   .hero-wash {
     background: linear-gradient(
       90deg,
-      rgba(var(--hero-ivory), .54) 0%,
-      rgba(var(--hero-ivory), .38) 24%,
-      rgba(var(--hero-ivory), .14) 44%,
-      rgba(var(--hero-ivory), 0) 66%
+      rgba(28,26,24,.30) 0%,
+      rgba(28,26,24,.14) 34%,
+      rgba(28,26,24,0) 70%
     ) !important;
   }
 }
