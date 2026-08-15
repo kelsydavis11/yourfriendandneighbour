@@ -1,48 +1,73 @@
 /* Latest design refinements */
 :root {
-  --promo-green: #d9e2d4;
+  --promo-green: #b7c3ae;
   --promo-green-deep: #68755f;
+  --promo-green-text: #2f3a2d;
+  --hero-ivory: 246, 244, 239;
 }
 
-/* Keep photography natural and editorial through layout/crop, not greying it out */
+/* Keep the real photography untouched. The editorial effect is only an overlay. */
 .editorial-image,
 .guest-property-hero img {
   filter: none !important;
+  transform: none !important;
 }
 .hero-editorial-wash {
   display: none !important;
 }
+
+/* Homepage hero: subtle ivory veil on the left, fading fully away by the right. */
 .hero-wash {
-  background: linear-gradient(90deg, rgba(35,31,29,.42) 0%, rgba(35,31,29,.15) 46%, rgba(35,31,29,.02) 78%) !important;
+  background: linear-gradient(
+    90deg,
+    rgba(var(--hero-ivory), .62) 0%,
+    rgba(var(--hero-ivory), .50) 15%,
+    rgba(var(--hero-ivory), .28) 29%,
+    rgba(var(--hero-ivory), .11) 42%,
+    rgba(var(--hero-ivory), .025) 54%,
+    rgba(var(--hero-ivory), 0) 64%
+  ) !important;
 }
-.guest-property-wash {
-  background: linear-gradient(90deg, rgba(36,31,29,.40), rgba(36,31,29,.08) 68%) !important;
+.home-hero .hero-content {
+  color: var(--ink) !important;
+}
+.home-hero .eyebrow.light {
+  color: var(--ink) !important;
+}
+.home-hero .light-link {
+  color: var(--ink) !important;
 }
 
-/* EatClub promotion: soft eucalyptus green pulled from the apartment greenery */
+/* Guest-property heroes keep the image natural, with only enough darkening for white type. */
+.guest-property-wash {
+  background: linear-gradient(90deg, rgba(36,31,29,.34), rgba(36,31,29,.06) 68%) !important;
+}
+
+/* EatClub promotion: pale sage/olive, editorial and prominent without a boxed border. */
 .promo-bar {
   background: var(--promo-green) !important;
-  color: #263024 !important;
-  border-bottom: 1.5px solid #263024 !important;
-  box-shadow: none !important;
+  color: var(--promo-green-text) !important;
+  border-bottom: 0 !important;
+  box-shadow: 0 1px 0 rgba(47,58,45,.14) !important;
   font-size: .76rem !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
 }
 .promo-bar strong {
+  color: var(--promo-green-text) !important;
   font-weight: 500 !important;
 }
 .promo-kicker {
-  color: #4f5e49 !important;
+  color: #52604d !important;
   font-weight: 500 !important;
 }
 .promo-link {
-  color: #263024 !important;
+  color: var(--promo-green-text) !important;
   font-weight: 500 !important;
-  border-bottom-width: 1.5px !important;
+  border-bottom: 1px solid rgba(47,58,45,.45) !important;
 }
 
-/* Bring the same green through sparingly so the promo feels intentional, not bolted on */
+/* Bring the same green through sparingly so the promo feels intentional. */
 .perks-strip {
   background: var(--promo-green-deep) !important;
 }
@@ -83,4 +108,15 @@
 @media (max-width: 680px) {
   .manual-content-grid { grid-template-columns: 1fr; }
   .promo-bar { font-size: .68rem !important; }
+
+  /* On mobile the veil remains light and ends early so the apartment still reads clearly. */
+  .hero-wash {
+    background: linear-gradient(
+      90deg,
+      rgba(var(--hero-ivory), .54) 0%,
+      rgba(var(--hero-ivory), .38) 24%,
+      rgba(var(--hero-ivory), .14) 44%,
+      rgba(var(--hero-ivory), 0) 66%
+    ) !important;
+  }
 }
