@@ -1,0 +1,77 @@
+/* Latest design refinements */
+:root {
+  --rose-soft: #efd8d1;
+}
+
+/* Keep photography natural and editorial through layout/crop, not greying it out */
+.editorial-image,
+.guest-property-hero img {
+  filter: none !important;
+}
+.hero-editorial-wash {
+  display: none !important;
+}
+.hero-wash {
+  background: linear-gradient(90deg, rgba(35,31,29,.42) 0%, rgba(35,31,29,.15) 46%, rgba(35,31,29,.02) 78%) !important;
+}
+.guest-property-wash {
+  background: linear-gradient(90deg, rgba(36,31,29,.40), rgba(36,31,29,.08) 68%) !important;
+}
+
+/* Make EatClub promotion clearer while keeping it on-brand */
+.promo-bar {
+  background: var(--rose-soft) !important;
+  border-bottom: 1.5px solid #292523 !important;
+  box-shadow: none !important;
+  font-size: .76rem !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.promo-bar strong {
+  font-weight: 500 !important;
+}
+.promo-kicker {
+  font-weight: 500 !important;
+}
+.promo-link {
+  font-weight: 500 !important;
+  border-bottom-width: 1.5px !important;
+}
+
+/* Manual content cards */
+.manual-content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+.manual-content-card {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.38);
+  padding: 24px;
+}
+.manual-content-card h3 {
+  font-size: 1.45rem;
+  margin: 0 0 12px;
+}
+.manual-content-card p {
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.65;
+}
+.manual-content-card .manual-note {
+  display: block;
+  margin-top: 12px;
+  font-size: .78rem;
+  line-height: 1.5;
+  opacity: .72;
+}
+
+@media (max-width: 900px) {
+  .manual-content-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 680px) {
+  .manual-content-grid { grid-template-columns: 1fr; }
+  .promo-bar { font-size: .68rem !important; }
+}
