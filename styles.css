@@ -4,6 +4,7 @@
   --warm: #f1f0eb;
   --sage: #7f876f;
   --clay: #a96650;
+  --rose: #e7cfc7;
   --line: rgba(41, 37, 35, 0.14);
   --white: #fffefa;
 }
@@ -14,7 +15,11 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Jos
 a { color: inherit; }
 img { display: block; width: 100%; }
 
-.site-header { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 16px 4.5vw; background: rgba(247,246,242,.96); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.promo-bar { display:flex; justify-content:center; align-items:center; gap:10px; padding:9px 20px; background:var(--rose); color:var(--ink); text-decoration:none; font-size:.72rem; letter-spacing:.02em; border-bottom:1px solid rgba(41,37,35,.1); }
+.promo-bar strong { font-weight:500; }
+.promo-link { text-decoration:underline; text-underline-offset:3px; }
+
+.site-header { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 16px 4.5vw; background: rgba(247,246,242,.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
 .brand,.footer-brand { text-decoration: none; font-family: "Junicode", Georgia, serif; font-size: 1.22rem; line-height: 1; white-space: nowrap; }
 .brand span,.footer-brand span { font-style: italic; }
 nav { display: flex; align-items: center; gap: clamp(12px,1.8vw,25px); }
@@ -37,12 +42,15 @@ h3 { font-size: clamp(1.55rem,2vw,2.1rem); line-height: 1; }
 
 .compact-section { padding: 76px 6vw; }
 .stays-intro { max-width: 600px; margin-bottom: 38px; }
-.stay-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 1120px; margin: 0 auto; }
-.stay-card { min-width: 0; }
+.stay-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-width: 1180px; margin: 0 auto; border:1px solid var(--line); background:var(--warm); }
+.stay-card { min-width: 0; padding:24px; background:rgba(255,255,255,.22); }
+.stay-card + .stay-card { border-left:1px solid var(--line); }
 .stay-card-image { display: block; aspect-ratio: 4 / 3; overflow: hidden; background: var(--warm); }
 .stay-card-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .35s ease; }
-.stay-card-image:hover img { transform: scale(1.015); }
-.stay-card-copy { padding: 18px 2px 0; }
+.surry-card-image img { transform: scale(1.11); object-position: 49% 48%; }
+.stay-card-image:hover img { transform: scale(1.025); }
+.surry-card-image:hover img { transform: scale(1.13); }
+.stay-card-copy { padding: 20px 2px 2px; }
 .stay-card-copy .eyebrow { color: var(--clay); margin-bottom: 8px; }
 .stay-card-copy > p:not(.eyebrow) { max-width: 470px; margin: 11px 0 14px; font-size: .9rem; line-height: 1.58; }
 
@@ -70,12 +78,19 @@ h3 { font-size: clamp(1.55rem,2vw,2.1rem); line-height: 1; }
 
 .friend-section-light { display:grid; grid-template-columns:.9fr 1.1fr; gap:8vw; }
 .friend-copy { max-width:510px; }
-.friend-form { display:grid; gap:13px; align-content:start; }
-.friend-form label { display:grid; gap:6px; font-size:.74rem; text-transform:uppercase; letter-spacing:.08em; font-weight:400; }
-.friend-form input[type=text],.friend-form input[type=email] { width:100%; padding:11px 0; border:0; border-bottom:1px solid var(--ink); background:transparent; font:inherit; text-transform:none; letter-spacing:0; }
+.friend-form,.popover-form { display:grid; gap:13px; align-content:start; }
+.friend-form label,.popover-form label { display:grid; gap:6px; font-size:.74rem; text-transform:uppercase; letter-spacing:.08em; font-weight:400; }
+.friend-form input[type=text],.friend-form input[type=email],.popover-form input[type=text],.popover-form input[type=email] { width:100%; padding:11px 0; border:0; border-bottom:1px solid var(--ink); background:transparent; font:inherit; text-transform:none; letter-spacing:0; outline:none; }
 .checkbox { grid-template-columns:auto 1fr !important; align-items:start; text-transform:none !important; letter-spacing:0 !important; font-size:.82rem !important; }
-.friend-form button { justify-self:start; padding:11px 17px; border:1px solid var(--ink); background:var(--ink); color:white; font:inherit; text-transform:uppercase; letter-spacing:.08em; cursor:pointer; }
+.friend-form button,.popover-form button { justify-self:start; padding:11px 17px; border:1px solid var(--ink); background:var(--ink); color:white; font:inherit; text-transform:uppercase; letter-spacing:.08em; cursor:pointer; }
 .friend-form small { opacity:.58; }
+
+.friend-popover { position:fixed; right:28px; bottom:28px; z-index:40; width:min(390px,calc(100vw - 32px)); padding:28px; background:#fbfaf6; border:1px solid var(--ink); box-shadow:0 18px 50px rgba(41,37,35,.14); transform:translateY(22px); opacity:0; pointer-events:none; transition:opacity .25s ease,transform .25s ease; }
+.friend-popover.show { opacity:1; transform:translateY(0); pointer-events:auto; }
+.friend-popover h3 { font-size:1.8rem; margin:0 34px 12px 0; }
+.friend-popover > p:not(.eyebrow) { font-size:.88rem; line-height:1.55; margin:0 0 18px; }
+.popover-close { position:absolute; top:14px; right:14px; border:0; background:transparent; color:var(--ink); font-size:1.8rem; line-height:1; cursor:pointer; font-weight:300; }
+.popover-form button { width:100%; justify-self:stretch; margin-top:4px; }
 
 footer { padding:26px 4.5vw; border-top:1px solid var(--line); display:grid; grid-template-columns:1fr auto auto; gap:26px; align-items:center; }
 .footer-links { display:flex; gap:18px; }
@@ -106,6 +121,7 @@ footer p { margin:0; font-size:.78rem; }
 }
 
 @media (max-width:680px) {
+  .promo-bar { font-size:.64rem; padding:8px 12px; flex-wrap:wrap; gap:5px 8px; text-align:center; }
   .site-header { padding:13px 5vw; }
   .brand { font-size:1rem; }
   nav { gap:7px 10px; }
@@ -116,7 +132,9 @@ footer p { margin:0; font-size:.78rem; }
   h1 { font-size:clamp(2.9rem,12vw,4.2rem); }
   h2 { font-size:clamp(2rem,9vw,3rem); }
   .compact-section { padding:62px 6vw; }
-  .stay-cards { grid-template-columns:1fr; gap:44px; }
+  .stay-cards { grid-template-columns:1fr; border:0; background:transparent; }
+  .stay-card { padding:0 0 34px; }
+  .stay-card + .stay-card { border-left:0; border-top:1px solid var(--line); padding-top:34px; }
   .lifestyle-banner { min-height:420px; height:58vh; }
   .recommend-list a { grid-template-columns:1fr; gap:5px; }
   .recommend-list small { grid-column:auto; }
@@ -124,4 +142,5 @@ footer p { margin:0; font-size:.78rem; }
   .footer-links { flex-wrap:wrap; }
   .quick-links,.wifi-details,.recommendation-grid,.perk-links { grid-template-columns:1fr; }
   .wifi-card { margin:0 5vw 55px; padding:28px 22px; }
+  .friend-popover { right:16px; bottom:16px; }
 }
