@@ -1,230 +1,96 @@
 /* Design v3 consolidates all active styles in styles.css. */
 
-/* Darlinghurst guest companion: task-first mobile experience */
-.darlinghurst-guest-page .guest-property-hero-compact {
-  height: min(42vw, 390px);
-  min-height: 300px;
-}
-.darlinghurst-guest-page .guest-property-hero-compact img {
-  object-position: 58% 48%;
-}
-.darlinghurst-guest-page .guest-property-copy {
-  padding: 5vh 5vw;
-  max-width: 680px;
-}
-.darlinghurst-guest-page .guest-property-copy > p:not(.eyebrow) {
-  max-width: 48ch;
-  margin-bottom: 0;
+/* Darlinghurst guest companion v3 */
+.darlinghurst-guest-page .guest-header nav{gap:18px}
+
+.guest-split-hero{display:grid;grid-template-columns:minmax(280px,.82fr) 1.18fr;min-height:300px;background:var(--warm);border-bottom:1px solid var(--line)}
+.guest-split-image{min-height:300px;overflow:hidden}
+.guest-split-image img{width:100%;height:100%;object-fit:cover;object-position:50% 52%}
+.guest-split-copy{padding:48px 6vw;display:flex;flex-direction:column;justify-content:center;max-width:680px}
+.guest-split-copy h1{font-size:clamp(2.35rem,4.2vw,4rem);margin-bottom:12px}
+.guest-split-copy>p:not(.eyebrow){margin:0 0 18px;max-width:34ch;color:var(--body);font-size:14px}
+.guest-help-link{display:inline-flex;align-items:center;min-height:40px;align-self:flex-start;color:var(--clay);text-decoration:none;border-bottom:1px solid rgba(143,83,64,.4);font-size:12.5px;font-weight:400}
+
+.guest-quick-section{padding:34px 5vw 40px;background:var(--paper);border-bottom:1px solid var(--line)}
+.guest-quick-heading{display:flex;justify-content:space-between;gap:24px;align-items:end;max-width:1180px;margin:0 auto 20px}
+.guest-quick-heading .eyebrow{margin-bottom:8px}
+.guest-quick-heading h2{font-size:clamp(1.85rem,2.8vw,2.7rem)}
+.guest-quick-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));max-width:1180px;margin:0 auto;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.guest-quick-list a{min-height:52px;padding:11px 14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;text-decoration:none;background:rgba(255,255,255,.18);font-size:12.5px}
+.guest-quick-list a:hover{background:rgba(255,255,255,.6)}
+.guest-quick-list a span{font-size:16px;line-height:1;flex:0 0 auto}
+.guest-quick-list a strong{font-weight:400}
+
+.guest-context-note{padding:24px 5vw;background:#efe9e2;border-bottom:1px solid var(--line)}
+.guest-context-note>div{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:230px 1fr;gap:34px;align-items:start}
+.guest-context-note .eyebrow{margin:2px 0 0}
+.guest-context-note p:last-child{margin:0;max-width:78ch;color:var(--body);font-size:13.5px;line-height:1.65}
+
+.guest-help-strip-compact{padding:30px 5vw!important;grid-template-columns:.8fr 1.2fr!important;gap:5vw!important}
+.guest-help-strip-compact h2{font-size:clamp(1.7rem,2.4vw,2.3rem)!important}
+.guest-help-strip-compact>p{font-size:13.5px!important;max-width:60ch!important}
+
+.guest-wifi-card-compact{margin:0!important;border-radius:0!important;padding:30px 5vw!important;display:grid!important;grid-template-columns:.8fr 1.2fr!important;gap:5vw!important;align-items:center}
+.guest-wifi-card-compact .wifi-details{margin-top:0!important}
+
+.guest-essential-section{padding:64px 5vw!important;background:var(--warm)}
+.guest-essential-intro{max-width:760px!important;margin:0 0 28px!important}
+.guest-essential-intro>p:not(.eyebrow){max-width:58ch;color:var(--body);font-size:13.5px}
+.guest-manual-list{border-top:1px solid var(--line);max-width:1180px}
+.guest-manual-row{display:grid;grid-template-columns:58px minmax(0,1fr);gap:18px;padding:24px 4px;border-bottom:1px solid var(--line);scroll-margin-top:130px}
+.guest-manual-icon{width:42px;height:42px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;background:var(--paper);font-size:19px;line-height:1}
+.guest-manual-copy{max-width:820px}
+.guest-manual-copy h3{font-size:1.45rem;margin-bottom:8px}
+.guest-manual-copy p{margin:6px 0 0;color:var(--body);font-size:13.5px;line-height:1.62}
+.guest-manual-copy strong{font-weight:500;color:var(--ink)}
+
+@media(max-width:900px){
+  .darlinghurst-guest-page .guest-header{gap:10px}
+  .darlinghurst-guest-page .guest-header nav{gap:14px}
+  .guest-split-hero{grid-template-columns:40% 60%;min-height:245px}
+  .guest-split-image{min-height:245px}
+  .guest-split-copy{padding:28px 5vw}
+  .guest-split-copy h1{font-size:clamp(2rem,5.7vw,2.8rem)}
+  .guest-split-copy>p:not(.eyebrow){font-size:13px;line-height:1.55;margin-bottom:12px}
+  .guest-quick-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .guest-context-note>div{grid-template-columns:1fr;gap:10px}
+  .guest-help-strip-compact,.guest-wifi-card-compact{grid-template-columns:1fr!important;gap:18px!important}
 }
 
-.guest-command-centre {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 58px 5vw 64px;
-  display: grid;
-  grid-template-columns: .68fr 1.32fr;
-  gap: 5vw;
-  align-items: start;
-}
-.guest-command-intro {
-  max-width: 360px;
-  position: sticky;
-  top: 128px;
-}
-.guest-command-intro > p:not(.eyebrow) {
-  color: var(--body);
-  margin: 16px 0 0;
-}
-.guest-task-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-.guest-task {
-  min-height: 132px;
-  padding: 18px;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  transition: background .2s ease, border-color .2s ease, transform .2s ease;
-}
-.guest-task:hover {
-  background: #fff;
-  border-color: rgba(41,37,35,.35);
-  transform: translateY(-1px);
-}
-.guest-task-priority {
-  background: var(--warm);
-}
-.guest-task-number {
-  color: var(--clay);
-  font-size: 10px;
-  letter-spacing: .16em;
-  font-weight: 500;
-}
-.guest-task strong {
-  margin-top: auto;
-  font-family: "Junicode", Georgia, serif;
-  font-size: 1.26rem;
-  line-height: 1.05;
-  font-weight: 400;
-}
-.guest-task small {
-  margin-top: 6px;
-  color: var(--muted);
-  font-size: 12.5px;
-  line-height: 1.4;
-}
+@media(max-width:680px){
+  .darlinghurst-guest-page .promo-bar{font-size:11px!important;gap:8px!important}
+  .darlinghurst-guest-page .promo-kicker{display:none!important}
+  .darlinghurst-guest-page .guest-header{padding:12px 4vw!important}
+  .darlinghurst-guest-page .guest-header .brand{font-size:1.15rem}
+  .darlinghurst-guest-page .guest-header nav{margin-top:8px;gap:14px;overflow-x:auto;padding-bottom:1px;scrollbar-width:none}
+  .darlinghurst-guest-page .guest-header nav::-webkit-scrollbar{display:none}
+  .darlinghurst-guest-page .guest-header nav a{min-height:34px;font-size:10px}
+  .darlinghurst-guest-page .guest-header .nav-cta{display:none}
 
-.guest-help-strip {
-  margin: 0 5vw 62px;
-  padding: 28px 30px;
-  border: 1px solid rgba(104,117,95,.38);
-  background: rgba(183,195,174,.2);
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 5vw;
-  align-items: center;
-}
-.guest-help-strip h2 {
-  font-size: clamp(1.55rem, 2.2vw, 2.15rem);
-}
-.guest-help-strip > p {
-  margin: 0;
-  color: var(--body);
-  max-width: 62ch;
-}
+  .guest-split-hero{grid-template-columns:42% 58%;min-height:220px}
+  .guest-split-image{min-height:220px}
+  .guest-split-image img{object-position:52% 52%}
+  .guest-split-copy{padding:22px 16px}
+  .guest-split-copy .eyebrow{font-size:9px;margin-bottom:8px}
+  .guest-split-copy h1{font-size:clamp(1.85rem,8vw,2.35rem);line-height:1.02;margin-bottom:10px}
+  .guest-split-copy>p:not(.eyebrow){font-size:12.5px;line-height:1.45;margin-bottom:10px}
+  .guest-help-link{font-size:11.5px;line-height:1.35;min-height:34px}
 
-.darlinghurst-guest-page .guest-wifi-card {
-  margin: 0 5vw 72px;
-  display: grid;
-  grid-template-columns: .75fr 1.25fr;
-  gap: 5vw;
-  align-items: end;
-}
-.darlinghurst-guest-page .guest-wifi-card .wifi-details {
-  margin-top: 0;
-}
+  .guest-quick-section{padding:24px 4vw 28px}
+  .guest-quick-heading{margin-bottom:14px}
+  .guest-quick-heading .eyebrow{margin-bottom:6px}
+  .guest-quick-heading h2{font-size:1.8rem}
+  .guest-quick-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .guest-quick-list a{min-height:48px;padding:9px 10px;gap:8px;font-size:11.5px;line-height:1.25}
+  .guest-quick-list a span{font-size:15px}
 
-.guest-manual-section {
-  scroll-margin-top: 110px;
-}
-.guest-manual-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-.guest-manual-card {
-  scroll-margin-top: 120px;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-}
-.guest-manual-card .card-kicker {
-  margin: 0 0 10px;
-  color: var(--clay);
-  text-transform: uppercase;
-  letter-spacing: .16em;
-  font-size: 10px;
-  font-weight: 500;
-}
-.guest-manual-card h3 {
-  font-size: 1.45rem;
-  margin-bottom: 14px;
-}
-.guest-manual-card .manual-note {
-  margin-top: auto;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-}
-.featured-help-card {
-  background: rgba(183,195,174,.18);
-  border-color: rgba(104,117,95,.32);
-}
-.important-note {
-  color: var(--ink) !important;
-  font-weight: 400;
-}
-.contact-card {
-  background: var(--ink);
-  color: var(--paper);
-  border-color: var(--ink);
-}
-.contact-card .card-kicker,
-.contact-card p {
-  color: rgba(247,246,242,.78) !important;
-}
-.contact-card h3 {
-  color: var(--paper);
-}
-
-@media (max-width: 900px) {
-  .darlinghurst-guest-page .guest-property-hero-compact {
-    height: 38vh;
-    min-height: 290px;
-  }
-  .guest-command-centre {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding-top: 44px;
-  }
-  .guest-command-intro {
-    position: static;
-    max-width: 520px;
-  }
-  .guest-help-strip,
-  .darlinghurst-guest-page .guest-wifi-card {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-  .guest-manual-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 680px) {
-  .darlinghurst-guest-page .guest-property-hero-compact {
-    min-height: 255px;
-    height: 32vh;
-  }
-  .darlinghurst-guest-page .guest-property-copy {
-    padding: 34px 5vw;
-  }
-  .darlinghurst-guest-page .guest-property-copy h1 {
-    font-size: clamp(2rem, 9vw, 2.7rem);
-  }
-  .darlinghurst-guest-page .guest-property-copy > p:not(.eyebrow) {
-    font-size: 13.5px;
-    line-height: 1.55;
-  }
-  .guest-command-centre {
-    padding: 36px 4vw 46px;
-  }
-  .guest-task-grid {
-    gap: 8px;
-  }
-  .guest-task {
-    min-height: 118px;
-    padding: 15px;
-  }
-  .guest-task strong {
-    font-size: 1.08rem;
-  }
-  .guest-task small {
-    font-size: 11.5px;
-  }
-  .guest-help-strip {
-    margin: 0 4vw 48px;
-    padding: 22px;
-  }
-  .darlinghurst-guest-page .guest-wifi-card {
-    margin: 0 4vw 52px;
-    padding: 28px 22px;
-  }
-  .guest-manual-grid {
-    grid-template-columns: 1fr;
-  }
-  .guest-manual-card {
-    min-height: 0;
-  }
+  .guest-context-note{padding:20px 4vw}
+  .guest-context-note p:last-child{font-size:12.5px;line-height:1.6}
+  .guest-help-strip-compact{padding:24px 4vw!important}
+  .guest-wifi-card-compact{padding:26px 4vw!important}
+  .guest-essential-section{padding:46px 4vw!important}
+  .guest-manual-row{grid-template-columns:44px 1fr;gap:12px;padding:20px 0}
+  .guest-manual-icon{width:38px;height:38px;font-size:17px}
+  .guest-manual-copy h3{font-size:1.28rem}
+  .guest-manual-copy p{font-size:12.7px;line-height:1.58}
 }
