@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Junicode:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="overrides.css?v=guest2">
+  <link rel="stylesheet" href="overrides.css?v=guest3">
 </head>
 <body class="guest-page darlinghurst-guest-page">
   <a class="promo-bar" href="https://links.eatclub.com.au/VXpTUVMaY2b" target="_blank" rel="noopener noreferrer">
@@ -21,8 +21,8 @@
     <a class="brand" href="index.html">Your Friend <span>&amp;</span> Neighbour</a>
     <nav aria-label="Guest navigation">
       <a href="#wifi">WiFi</a>
+      <a href="#essentials">House manual</a>
       <a href="#help">Need help?</a>
-      <a href="#house-manual">House manual</a>
       <a href="#guide">Eat &amp; drink</a>
       <a href="#perks">Friend perks</a>
       <a class="nav-cta" href="index.html#friend">Stay again</a>
@@ -30,76 +30,51 @@
   </header>
 
   <main>
-    <section class="guest-property-hero guest-property-hero-compact">
-      <img src="IMG_4740.jpg" alt="#17 on Victoria apartment in Darlinghurst">
-      <div class="guest-property-wash"></div>
-      <div class="guest-property-copy">
-        <p class="eyebrow light">Darlinghurst</p>
+    <section class="guest-split-hero" aria-label="#17 on Victoria guest guide">
+      <div class="guest-split-image">
+        <img src="IMG_4747.jpg" alt="#17 on Victoria apartment in Darlinghurst">
+      </div>
+      <div class="guest-split-copy">
+        <p class="eyebrow">Darlinghurst</p>
         <h1>#17 on Victoria</h1>
-        <p>Everything you need for your stay — WiFi, TV, building access, laundry, local tips and more.</p>
+        <p>Everything you need for your stay, kept easy to find.</p>
+        <a class="guest-help-link" href="#help">Something not working? Message us →</a>
       </div>
     </section>
 
-    <section class="guest-command-centre" aria-labelledby="guest-help-heading">
-      <div class="guest-command-intro">
+    <section class="guest-quick-section" aria-labelledby="guest-help-heading">
+      <div class="guest-quick-heading">
         <p class="eyebrow">During your stay</p>
         <h2 id="guest-help-heading">What do you need?</h2>
-        <p>Tap what you're looking for. The things guests ask about most are right here.</p>
       </div>
+      <nav class="guest-quick-list" aria-label="Quick guest help">
+        <a href="#wifi"><span aria-hidden="true">📶</span><strong>WiFi</strong></a>
+        <a href="#tv"><span aria-hidden="true">📺</span><strong>TV &amp; Chromecast</strong></a>
+        <a href="#lamp"><span aria-hidden="true">💡</span><strong>Living room lamp</strong></a>
+        <a href="#kitchen"><span aria-hidden="true">🍳</span><strong>Stove &amp; oven</strong></a>
+        <a href="#building-access"><span aria-hidden="true">🚗</span><strong>Car park &amp; bins</strong></a>
+        <a href="#laundry"><span aria-hidden="true">🧺</span><strong>Laundry</strong></a>
+        <a href="#guide"><span aria-hidden="true">🍽️</span><strong>Eat &amp; drink</strong></a>
+        <a href="#perks"><span aria-hidden="true">★</span><strong>Friend perks</strong></a>
+      </nav>
+    </section>
 
-      <div class="guest-task-grid">
-        <a href="#wifi" class="guest-task guest-task-priority">
-          <span class="guest-task-number">01</span>
-          <strong>WiFi</strong>
-          <small>Network &amp; password</small>
-        </a>
-        <a href="#tv" class="guest-task guest-task-priority">
-          <span class="guest-task-number">02</span>
-          <strong>TV &amp; Chromecast</strong>
-          <small>Including if the TV won't turn on</small>
-        </a>
-        <a href="#laundry" class="guest-task">
-          <span class="guest-task-number">03</span>
-          <strong>Laundry</strong>
-          <small>Washing machine &amp; drying rack</small>
-        </a>
-        <a href="#building-access" class="guest-task">
-          <span class="guest-task-number">04</span>
-          <strong>Lift, car park &amp; bins</strong>
-          <small>How to get down to G</small>
-        </a>
-        <a href="#house-manual" class="guest-task">
-          <span class="guest-task-number">05</span>
-          <strong>House manual &amp; FAQ</strong>
-          <small>The practical stuff</small>
-        </a>
-        <a href="#guide" class="guest-task">
-          <span class="guest-task-number">06</span>
-          <strong>Eat &amp; drink</strong>
-          <small>Our actual favourites nearby</small>
-        </a>
-        <a href="#perks" class="guest-task">
-          <span class="guest-task-number">07</span>
-          <strong>Friend perks</strong>
-          <small>EatClub, DoorDash &amp; more</small>
-        </a>
-        <a href="index.html#friend" class="guest-task">
-          <span class="guest-task-number">08</span>
-          <strong>Stay again</strong>
-          <small>Book direct for a better rate</small>
-        </a>
+    <section class="guest-context-note" aria-label="About the apartment">
+      <div>
+        <p class="eyebrow">A quick note about the apartment</p>
+        <p>As noted in the listing, #17 is a lived-in home that we personally manage, rather than a serviced hotel apartment. It is cared for and comfortable, but not every fixture is brand new. We really appreciate guests treating it like a home — and messaging us straight away if anything doesn't seem right so we can help.</p>
       </div>
     </section>
 
-    <section id="help" class="guest-help-strip">
+    <section id="help" class="guest-help-strip guest-help-strip-compact">
       <div>
         <p class="eyebrow">Something not working?</p>
-        <h2>Please message us straight away.</h2>
+        <h2>Please message us while you're here.</h2>
       </div>
-      <p>Most things are quick to solve. If something isn't working as expected, please message us through Airbnb or Booking.com while you're here so we can help right away.</p>
+      <p>Most things are quick to solve. If something isn't working as expected, please message us through Airbnb or Booking.com straight away rather than waiting until check-out.</p>
     </section>
 
-    <section id="wifi" class="wifi-card guest-wifi-card">
+    <section id="wifi" class="wifi-card guest-wifi-card guest-wifi-card-compact">
       <div>
         <p class="eyebrow">WiFi</p>
         <h2>Connect and settle in.</h2>
@@ -110,50 +85,56 @@
       </div>
     </section>
 
-    <section id="house-manual" class="section house-manual-section guest-manual-section">
-      <div class="section-intro narrow">
-        <p class="eyebrow">House manual &amp; FAQ</p>
-        <h2>The practical stuff.</h2>
-        <p>Short answers to the things you're most likely to need. If anything is unclear, message us and we'll help.</p>
+    <section id="essentials" class="section guest-essential-section">
+      <div class="section-intro narrow guest-essential-intro">
+        <p class="eyebrow">House manual</p>
+        <h2>The things most worth knowing.</h2>
+        <p>Short, practical instructions for the apartment. If anything is unclear, message us and we'll help.</p>
       </div>
 
-      <div class="manual-content-grid guest-manual-grid">
-        <article id="tv" class="manual-content-card guest-manual-card featured-help-card">
-          <p class="card-kicker">TV not turning on?</p>
-          <h3>TV &amp; Chromecast</h3>
-          <p>Turn the living room TV on using the black universal remote. The TV has Chromecast, so you can cast streaming services from your phone.</p>
-          <span class="manual-note"><strong>If the remote power button isn't working:</strong> turn the TV on using the button on the back of the TV at the bottom right, and make sure the TV is switched on at the wall.</span>
+      <div class="guest-manual-list">
+        <article id="tv" class="guest-manual-row">
+          <div class="guest-manual-icon" aria-hidden="true">📺</div>
+          <div class="guest-manual-copy">
+            <h3>TV &amp; Chromecast</h3>
+            <p><strong>The remote power button is sticky.</strong> Turn the TV on using the physical power button behind the TV on the left side. The volume and other remote buttons work normally.</p>
+            <p>For Chromecast, make sure the TV source is set to <strong>HDMI 3</strong>. Once HDMI 3 is selected, cast from a streaming app on your phone to the Chromecast.</p>
+          </div>
         </article>
 
-        <article id="laundry" class="manual-content-card guest-manual-card">
-          <p class="card-kicker">Laundry</p>
-          <h3>Washing &amp; drying</h3>
-          <p>The washing machine works well. There is a clothes drying rack in the wardrobe.</p>
-          <span class="manual-note important-note"><strong>Please note:</strong> the tumble dryer does not work and is not listed as an amenity.</span>
+        <article id="lamp" class="guest-manual-row">
+          <div class="guest-manual-icon" aria-hidden="true">💡</div>
+          <div class="guest-manual-copy">
+            <h3>Living room lamp</h3>
+            <p>Turn the lamp on at the <strong>wall switch first</strong>, then use the lamp's own power button.</p>
+          </div>
         </article>
 
-        <article id="building-access" class="manual-content-card guest-manual-card">
-          <p class="card-kicker">Building access</p>
-          <h3>Car park &amp; bins</h3>
-          <p>To take the lift down to the car park and bins, turn the small key in the elevator and then press <strong>G</strong>.</p>
+        <article id="kitchen" class="guest-manual-row">
+          <div class="guest-manual-icon" aria-hidden="true">🍳</div>
+          <div class="guest-manual-copy">
+            <h3>Stove &amp; oven</h3>
+            <p>Before using either the stovetop or oven, make sure the <strong>middle switch on the power outlet on the left kitchen splashback</strong>, labelled <strong>OVEN</strong>, is switched on.</p>
+            <p>The stovetop is touch-activated induction. <strong>Press and hold the power button</strong> to switch it on.</p>
+          </div>
         </article>
 
-        <article class="manual-content-card guest-manual-card">
-          <p class="card-kicker">Building</p>
-          <h3>Gym &amp; sauna</h3>
-          <p>Building access details will be added here once we've pulled them across from the full house manual.</p>
+        <article id="building-access" class="guest-manual-row">
+          <div class="guest-manual-icon" aria-hidden="true">🚗</div>
+          <div class="guest-manual-copy">
+            <h3>Car park &amp; bin room access</h3>
+            <p>In the lift, use the <strong>small key and hold it turned while pressing G</strong> for the ground floor.</p>
+            <p>The bin rooms are on the <strong>right as you come out of the lift</strong>.</p>
+          </div>
         </article>
 
-        <article id="checkout" class="manual-content-card guest-manual-card">
-          <p class="card-kicker">Before you leave</p>
-          <h3>Check-out</h3>
-          <p>Check-out instructions will be added here so you don't need to dig through the booking platform.</p>
-        </article>
-
-        <article class="manual-content-card guest-manual-card contact-card">
-          <p class="card-kicker">Can't find it?</p>
-          <h3>Something else?</h3>
-          <p>Message us through Airbnb or Booking.com. We'd much rather help while you're here than have you put up with something that can be fixed.</p>
+        <article id="laundry" class="guest-manual-row">
+          <div class="guest-manual-icon" aria-hidden="true">🧺</div>
+          <div class="guest-manual-copy">
+            <h3>Laundry</h3>
+            <p>The washing machine works normally and there is a clothes drying rack in the wardrobe.</p>
+            <p><strong>Please note:</strong> the tumble dryer does not work and is not listed as an amenity.</p>
+          </div>
         </article>
       </div>
     </section>
