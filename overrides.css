@@ -1,2 +1,230 @@
 /* Design v3 consolidates all active styles in styles.css. */
-/* Preview rebuild trigger. */
+
+/* Darlinghurst guest companion: task-first mobile experience */
+.darlinghurst-guest-page .guest-property-hero-compact {
+  height: min(42vw, 390px);
+  min-height: 300px;
+}
+.darlinghurst-guest-page .guest-property-hero-compact img {
+  object-position: 58% 48%;
+}
+.darlinghurst-guest-page .guest-property-copy {
+  padding: 5vh 5vw;
+  max-width: 680px;
+}
+.darlinghurst-guest-page .guest-property-copy > p:not(.eyebrow) {
+  max-width: 48ch;
+  margin-bottom: 0;
+}
+
+.guest-command-centre {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 58px 5vw 64px;
+  display: grid;
+  grid-template-columns: .68fr 1.32fr;
+  gap: 5vw;
+  align-items: start;
+}
+.guest-command-intro {
+  max-width: 360px;
+  position: sticky;
+  top: 128px;
+}
+.guest-command-intro > p:not(.eyebrow) {
+  color: var(--body);
+  margin: 16px 0 0;
+}
+.guest-task-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.guest-task {
+  min-height: 132px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.guest-task:hover {
+  background: #fff;
+  border-color: rgba(41,37,35,.35);
+  transform: translateY(-1px);
+}
+.guest-task-priority {
+  background: var(--warm);
+}
+.guest-task-number {
+  color: var(--clay);
+  font-size: 10px;
+  letter-spacing: .16em;
+  font-weight: 500;
+}
+.guest-task strong {
+  margin-top: auto;
+  font-family: "Junicode", Georgia, serif;
+  font-size: 1.26rem;
+  line-height: 1.05;
+  font-weight: 400;
+}
+.guest-task small {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.guest-help-strip {
+  margin: 0 5vw 62px;
+  padding: 28px 30px;
+  border: 1px solid rgba(104,117,95,.38);
+  background: rgba(183,195,174,.2);
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 5vw;
+  align-items: center;
+}
+.guest-help-strip h2 {
+  font-size: clamp(1.55rem, 2.2vw, 2.15rem);
+}
+.guest-help-strip > p {
+  margin: 0;
+  color: var(--body);
+  max-width: 62ch;
+}
+
+.darlinghurst-guest-page .guest-wifi-card {
+  margin: 0 5vw 72px;
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 5vw;
+  align-items: end;
+}
+.darlinghurst-guest-page .guest-wifi-card .wifi-details {
+  margin-top: 0;
+}
+
+.guest-manual-section {
+  scroll-margin-top: 110px;
+}
+.guest-manual-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.guest-manual-card {
+  scroll-margin-top: 120px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+.guest-manual-card .card-kicker {
+  margin: 0 0 10px;
+  color: var(--clay);
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 10px;
+  font-weight: 500;
+}
+.guest-manual-card h3 {
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+}
+.guest-manual-card .manual-note {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.featured-help-card {
+  background: rgba(183,195,174,.18);
+  border-color: rgba(104,117,95,.32);
+}
+.important-note {
+  color: var(--ink) !important;
+  font-weight: 400;
+}
+.contact-card {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.contact-card .card-kicker,
+.contact-card p {
+  color: rgba(247,246,242,.78) !important;
+}
+.contact-card h3 {
+  color: var(--paper);
+}
+
+@media (max-width: 900px) {
+  .darlinghurst-guest-page .guest-property-hero-compact {
+    height: 38vh;
+    min-height: 290px;
+  }
+  .guest-command-centre {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 44px;
+  }
+  .guest-command-intro {
+    position: static;
+    max-width: 520px;
+  }
+  .guest-help-strip,
+  .darlinghurst-guest-page .guest-wifi-card {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .guest-manual-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .darlinghurst-guest-page .guest-property-hero-compact {
+    min-height: 255px;
+    height: 32vh;
+  }
+  .darlinghurst-guest-page .guest-property-copy {
+    padding: 34px 5vw;
+  }
+  .darlinghurst-guest-page .guest-property-copy h1 {
+    font-size: clamp(2rem, 9vw, 2.7rem);
+  }
+  .darlinghurst-guest-page .guest-property-copy > p:not(.eyebrow) {
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+  .guest-command-centre {
+    padding: 36px 4vw 46px;
+  }
+  .guest-task-grid {
+    gap: 8px;
+  }
+  .guest-task {
+    min-height: 118px;
+    padding: 15px;
+  }
+  .guest-task strong {
+    font-size: 1.08rem;
+  }
+  .guest-task small {
+    font-size: 11.5px;
+  }
+  .guest-help-strip {
+    margin: 0 4vw 48px;
+    padding: 22px;
+  }
+  .darlinghurst-guest-page .guest-wifi-card {
+    margin: 0 4vw 52px;
+    padding: 28px 22px;
+  }
+  .guest-manual-grid {
+    grid-template-columns: 1fr;
+  }
+  .guest-manual-card {
+    min-height: 0;
+  }
+}
