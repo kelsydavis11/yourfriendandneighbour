@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Surry Hills House Manual Flyer | Your Friend & Neighbour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Junicode:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F7F4EC;--ink:#282624;--olive:#7A7A50;--muted:#65615B;--line:#DDD8CC;--card:#FBFAF6;}
+    *{box-sizing:border-box}
+    body{margin:0;background:#e7e5df;color:var(--ink);font-family:"Jost",Arial,sans-serif;font-weight:300}
+    .print-btn{position:fixed;right:18px;top:18px;z-index:10;border:0;background:#2c2a27;color:white;padding:12px 16px;font:500 12px "Jost",sans-serif;letter-spacing:.06em;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.18)}
+    .sheet{width:210mm;min-height:297mm;margin:20px auto;background:var(--paper);box-shadow:0 10px 40px rgba(0,0,0,.15);overflow:hidden}
+    .topbar{height:31mm;padding:12mm 14mm 7mm;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:"Junicode",Georgia,serif;font-size:22pt;line-height:.9;font-weight:400;letter-spacing:-.02em}
+    .brand span{font-style:italic}
+    .location{display:flex;align-items:center;gap:7px;color:var(--olive);font-size:8pt;font-weight:600;letter-spacing:.25em;text-transform:uppercase;white-space:nowrap}
+    .icon-pin{width:14px;height:14px;stroke:var(--olive);fill:none;stroke-width:1.5}
+    .hero{height:74mm;overflow:hidden}
+    .hero img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}
+    .content{padding:11mm 14mm 8mm}
+    h1{margin:0;font-size:28pt;line-height:1.05;letter-spacing:-.035em;font-weight:700}
+    .tagline{margin:10mm 0 7mm;font-family:"Junicode",Georgia,serif;font-style:italic;color:var(--olive);font-size:15.5pt;line-height:1.2;max-width:120mm}
+    .lead{max-width:118mm;margin:0;color:var(--muted);font-size:9.5pt;line-height:1.55}
+    .main-grid{display:grid;grid-template-columns:1.55fr .85fr;gap:12mm;margin-top:8mm;align-items:start}
+    .feature-list{margin-top:4mm}
+    .feature-row{display:grid;grid-template-columns:24px 1fr;align-items:center;gap:11px;min-height:14mm;border-bottom:1px solid var(--line);font-size:10.8pt;font-weight:500}
+    .feature-row svg{width:19px;height:19px;stroke:var(--olive);fill:none;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+    .wifi-box{margin-top:7mm;border-radius:3px;background:#F1EEDD;padding:4.5mm 5mm;display:grid;grid-template-columns:28px 1px 1fr;gap:10px;align-items:center}
+    .wifi-box svg{width:28px;height:28px;stroke:var(--olive);fill:none;stroke-width:1.5}
+    .wifi-divider{height:28px;background:#C9C4AD}
+    .wifi-title{font-size:8.7pt;letter-spacing:.16em;text-transform:uppercase;color:var(--olive);font-weight:600;margin-bottom:1.5mm}
+    .wifi-line{font-size:8.7pt;line-height:1.5;color:var(--ink)}
+    .wifi-line b{font-weight:700}
+    .qr-card{background:#FBFAF6;border:1px solid #D7D2C6;padding:7mm 6mm 6mm;text-align:center;min-height:80mm;display:flex;flex-direction:column;align-items:center}
+    .qr-kicker{font-size:7pt;color:var(--olive);font-weight:600;letter-spacing:.26em;text-transform:uppercase;margin-bottom:2mm}
+    .qr-sub{font-size:8pt;line-height:1.35;color:var(--muted);margin-bottom:4mm}
+    .qr-card img{width:52mm;height:52mm;display:block}
+    .footer{margin-top:8mm;border-top:1px solid var(--line);padding-top:6mm;display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start;color:var(--muted);font-size:8.5pt;line-height:1.45}
+    .footer svg{width:22px;height:22px;stroke:var(--olive);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+    .footer b{color:var(--olive);font-weight:700}
+    @page{size:A4;margin:0}
+    @media print{body{background:white}.sheet{margin:0;box-shadow:none;width:210mm;height:297mm}.print-btn{display:none}}
+    @media(max-width:860px){.sheet{width:100%;min-height:auto;margin:0}.print-btn{right:10px;top:10px}.main-grid{grid-template-columns:1fr}.qr-card{max-width:90mm}.topbar,.content{padding-left:7vw;padding-right:7vw}}
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">Print / save PDF</button>
+  <main class="sheet">
+    <header class="topbar">
+      <div class="brand">Your Friend<br><span>&amp;</span> Neighbour</div>
+      <div class="location">
+        <svg class="icon-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z"/><circle cx="12" cy="10" r="2"/></svg>
+        Surry Hills
+      </div>
+    </header>
+
+    <section class="hero">
+      <img src="846462E8-7C38-439E-BA54-2A30A4B643D7.jpg" alt="Excelsior on Elizabeth in Surry Hills">
+    </section>
+
+    <section class="content">
+      <h1>House manual &amp; local guide</h1>
+      <p class="tagline">Everything you need during your stay - all<br>in one place.</p>
+      <p class="lead">Scan the code to open your guest guide with WiFi, TV &amp; Chromecast help, house manual details, building facilities, local favourites, EatClub perks and direct contact if you need anything.</p>
+
+      <div class="main-grid">
+        <div>
+          <div class="feature-list">
+            <div class="feature-row">
+              <svg viewBox="0 0 24 24"><path d="M4 5.5h6.5c1.2 0 2.2.5 2.8 1.2.6-.7 1.6-1.2 2.8-1.2H20v13h-3.9c-1.2 0-2.2.4-2.8 1.1-.6-.7-1.6-1.1-2.8-1.1H4Z"/><path d="M13.3 6.7v12.9"/></svg>
+              <span>House manual &amp; FAQ</span>
+            </div>
+            <div class="feature-row">
+              <svg viewBox="0 0 24 24"><path d="M6 3v8M9 3v8M6 7h3M7.5 11v10M15 3c0 4 0 7 3 8v10M18 3v8"/></svg>
+              <span>Local food &amp; drink picks</span>
+            </div>
+            <div class="feature-row">
+              <svg viewBox="0 0 24 24"><path d="m4 12 8-8h6l2 2v6l-8 8-8-8Z"/><circle cx="16" cy="8" r="1.2"/></svg>
+              <span>Friend perks &amp; EatClub tips</span>
+            </div>
+            <div class="feature-row">
+              <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+              <span>Stay again for a better direct rate</span>
+            </div>
+          </div>
+
+          <div class="wifi-box">
+            <svg viewBox="0 0 24 24"><path d="M4 9.5a12 12 0 0 1 16 0M7 13a7.5 7.5 0 0 1 10 0M10 16.5a3 3 0 0 1 4 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/></svg>
+            <div class="wifi-divider"></div>
+            <div>
+              <div class="wifi-title">Quick WiFi</div>
+              <div class="wifi-line"><b>Network:</b> WiFi-5G-4E12 &nbsp;·&nbsp; <b>Password:</b> Nic44QEd</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="qr-card">
+          <div class="qr-kicker">Scan me</div>
+          <div class="qr-sub">Open your<br>Surry Hills guest guide</div>
+          <img src="surry-hills-guest-guide-qr.svg" alt="QR code to the Surry Hills guest guide">
+        </aside>
+      </div>
+
+      <footer class="footer">
+        <svg viewBox="0 0 24 24"><path d="M21 11.4a8.4 8.4 0 0 1-9 8.4 9.4 9.4 0 0 1-3.9-.9L3 20l1.4-4.3A8.1 8.1 0 0 1 3 11.4a8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 9 8.4Z"/><path d="M8 11.5h.01M12 11.5h.01M16 11.5h.01"/></svg>
+        <div>If you have any issues or questions, please message via Airbnb or Booking.com, or call <b>+61 422 735 797</b> - we'd love the chance to fix it while you're here.</div>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
