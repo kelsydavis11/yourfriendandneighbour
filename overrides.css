@@ -2,10 +2,12 @@
 
 /* Darlinghurst guest companion v4 */
 .darlinghurst-guest-page .guest-header nav{gap:18px}
+.surry-hills-guest-page .guest-header nav{gap:18px}
 
 .guest-split-hero{display:grid;grid-template-columns:minmax(280px,.82fr) 1.18fr;min-height:280px;background:var(--warm);border-bottom:1px solid var(--line)}
 .guest-split-image{min-height:280px;overflow:hidden}
 .guest-split-image img{width:100%;height:100%;object-fit:cover;object-position:50% 72%}
+.surry-hills-guest-page .guest-split-image img{object-position:50% 56%}
 .guest-split-copy{padding:44px 6vw;display:flex;flex-direction:column;justify-content:center;max-width:680px}
 .guest-split-copy h1{font-size:clamp(2.35rem,4.2vw,4rem);margin-bottom:12px}
 .guest-split-copy>p:not(.eyebrow){margin:0;max-width:34ch;color:var(--body);font-size:14px}
@@ -68,11 +70,12 @@
 .eatclub-tag:hover{background:#a9b8a0}
 
 @media(max-width:900px){
-  .darlinghurst-guest-page .guest-header{gap:10px}
-  .darlinghurst-guest-page .guest-header nav{gap:14px}
+  .darlinghurst-guest-page .guest-header,.surry-hills-guest-page .guest-header{gap:10px}
+  .darlinghurst-guest-page .guest-header nav,.surry-hills-guest-page .guest-header nav{gap:14px}
   .guest-split-hero{grid-template-columns:40% 60%;min-height:230px}
   .guest-split-image{min-height:230px}
   .guest-split-image img{object-position:50% 76%}
+  .surry-hills-guest-page .guest-split-image img{object-position:50% 56%}
   .guest-split-copy{padding:26px 5vw}
   .guest-split-copy h1{font-size:clamp(2rem,5.7vw,2.8rem)}
   .guest-split-copy>p:not(.eyebrow){font-size:13px;line-height:1.55}
@@ -87,20 +90,22 @@
 }
 
 @media(max-width:680px){
-  .darlinghurst-guest-page .promo-bar{font-size:11px!important;gap:8px!important}
-  .darlinghurst-guest-page .promo-kicker{display:none!important}
-  .darlinghurst-guest-page .guest-header{padding:12px 4vw!important}
-  .darlinghurst-guest-page .guest-header .brand{font-size:1.15rem}
-  .darlinghurst-guest-page .guest-header nav{margin-left:auto;gap:10px;overflow:visible;padding-bottom:0}
-  .darlinghurst-guest-page .guest-header nav a{min-height:34px;font-size:9.5px}
-  .darlinghurst-guest-page .guest-header .nav-cta{display:inline-flex;padding:6px 9px}
+  .darlinghurst-guest-page .promo-bar,.surry-hills-guest-page .promo-bar{font-size:11px!important;gap:8px!important}
+  .darlinghurst-guest-page .promo-kicker,.surry-hills-guest-page .promo-kicker{display:none!important}
+  .darlinghurst-guest-page .guest-header,.surry-hills-guest-page .guest-header{padding:12px 4vw!important}
+  .darlinghurst-guest-page .guest-header .brand,.surry-hills-guest-page .guest-header .brand{font-size:1.15rem}
+  .darlinghurst-guest-page .guest-header nav,.surry-hills-guest-page .guest-header nav{margin-left:auto;gap:10px;overflow:visible;padding-bottom:0}
+  .darlinghurst-guest-page .guest-header nav a,.surry-hills-guest-page .guest-header nav a{min-height:34px;font-size:9.5px}
+  .darlinghurst-guest-page .guest-header .nav-cta,.surry-hills-guest-page .guest-header .nav-cta{display:inline-flex;padding:6px 9px}
 
   .guest-split-hero{grid-template-columns:42% 58%;min-height:205px}
   .guest-split-image{min-height:205px}
   .guest-split-image img{object-position:50% 80%}
+  .surry-hills-guest-page .guest-split-image img{object-position:50% 56%}
   .guest-split-copy{padding:20px 16px}
   .guest-split-copy .eyebrow{font-size:9px;margin-bottom:8px}
   .guest-split-copy h1{font-size:clamp(1.85rem,8vw,2.35rem);line-height:1.02;margin-bottom:10px}
+  .surry-hills-guest-page .guest-split-copy h1{font-size:clamp(1.65rem,7vw,2.1rem)}
   .guest-split-copy>p:not(.eyebrow){font-size:12.5px;line-height:1.45}
 
   .guest-quick-section{padding:24px 4vw 28px}
