@@ -12,12 +12,37 @@
 
   <style>
     #essentials, #guide, #stay-again { scroll-margin-top: 120px; }
-    .guest-stay-again{padding:72px 5vw;background:rgba(183,195,174,.22);border-top:1px solid var(--line);display:grid;grid-template-columns:.9fr 1.1fr;gap:7vw;align-items:start}
-    .guest-stay-again-copy{max-width:560px}.guest-stay-again-copy h2{margin-bottom:16px}.guest-stay-again-copy p:not(.eyebrow){margin:0;color:var(--body);font-size:14px;line-height:1.7;max-width:48ch}
-    .guest-stay-again-form{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px;max-width:620px}.guest-stay-again-form label{display:grid;gap:5px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+    .guest-stay-again{
+      padding:0;
+      background:rgba(183,195,174,.22);
+      border-top:1px solid var(--line);
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      align-items:stretch;
+    }
+    .guest-stay-again-panel{padding:72px 5vw}
+    .guest-stay-again-copy{max-width:560px}
+    .guest-stay-again-copy h2{margin-bottom:16px}
+    .guest-stay-again-copy p:not(.eyebrow){margin:0;color:var(--body);font-size:14px;line-height:1.7;max-width:48ch}
+    .guest-stay-again-form{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px;max-width:620px;margin-top:30px}
+    .guest-stay-again-form label{display:grid;gap:5px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
     .guest-stay-again-form input[type=text],.guest-stay-again-form input[type=email]{width:100%;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:11px 0;font:inherit;outline:none}
-    .guest-stay-again-form .stay-again-note{grid-column:1/-1;margin:0;color:var(--body);font-size:12.5px;line-height:1.55}.guest-stay-again-form button{grid-column:1/-1;min-height:46px;padding:13px 22px;border:0;background:var(--ink);color:#fff;text-transform:uppercase;letter-spacing:.12em;font:500 11.5px "Jost",sans-serif;cursor:pointer}.guest-stay-again-form button:hover{background:#3E4A38}
-    @media(max-width:760px){.guest-stay-again{grid-template-columns:1fr;gap:28px;padding:52px 4vw}.guest-stay-again-form{grid-template-columns:1fr}.guest-stay-again-form .stay-again-note,.guest-stay-again-form button{grid-column:1}}
+    .guest-stay-again-form .stay-again-note{grid-column:1/-1;margin:0;color:var(--body);font-size:12.5px;line-height:1.55}
+    .guest-stay-again-form button{grid-column:1/-1;min-height:46px;padding:13px 22px;border:0;background:var(--ink);color:#fff;text-transform:uppercase;letter-spacing:.12em;font:500 11.5px "Jost",sans-serif;cursor:pointer}
+    .guest-stay-again-form button:hover{background:#3E4A38}
+    .guest-stay-again-image{min-height:430px;overflow:hidden}
+    .guest-stay-again-image img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}
+    .surry-hills-guest-page .guest-stay-again-image img{object-position:50% 55%}
+    .guest-public-site-link{display:inline-block;margin-top:22px;font-size:12px;font-weight:500;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+    @media(max-width:760px){
+      .guest-stay-again{grid-template-columns:1fr}
+      .guest-stay-again-panel{padding:52px 4vw}
+      .guest-stay-again-image{min-height:280px}
+      .guest-stay-again-form{grid-template-columns:1fr}
+      .guest-stay-again-form .stay-again-note,.guest-stay-again-form button{grid-column:1}
+    }
   </style>
 </head>
 <body class="guest-page surry-hills-guest-page">
@@ -97,16 +122,34 @@
     </section>
 
     <section id="stay-again" class="guest-stay-again" aria-labelledby="stay-again-heading">
-      <div class="guest-stay-again-copy"><p class="eyebrow">Stay again</p><h2 id="stay-again-heading">Come back direct next time.</h2><p>Leave your details and we'll simply share access to book direct in future, with a better rate than the booking platforms. That's it — no newsletters, no spam and no constant offers.</p></div>
-      <form class="guest-stay-again-form">
-        <label>First name<input type="text" name="first_name" autocomplete="given-name" placeholder="Alex"></label>
-        <label>Email<input type="email" name="email" autocomplete="email" placeholder="alex@example.com"></label>
-        <p class="stay-again-note">By submitting, you're asking us to send you direct-booking access for a future stay. We won't add you to a general mailing list.</p>
-        <button type="button">Get direct booking access</button>
-      </form>
+      <div class="guest-stay-again-panel">
+        <div class="guest-stay-again-copy">
+          <p class="eyebrow">Stay again</p>
+          <h2 id="stay-again-heading">Come back direct next time.</h2>
+          <p>Leave your details and we'll simply share access to book direct in future, with a better rate than the booking platforms. That's it — no newsletters, no spam and no constant offers.</p>
+        </div>
+        <form class="guest-stay-again-form">
+          <label>First name
+            <input type="text" name="first_name" autocomplete="given-name" placeholder="Alex">
+          </label>
+          <label>Email
+            <input type="email" name="email" autocomplete="email" placeholder="alex@example.com">
+          </label>
+          <p class="stay-again-note">By submitting, you're asking us to send you direct-booking access for a future stay. We won't add you to a general mailing list.</p>
+          <button type="button">Get direct booking access</button>
+        </form>
+        <a class="guest-public-site-link" href="index.html#stays">Explore our public website &amp; both Sydney stays →</a>
+      </div>
+      <div class="guest-stay-again-image">
+        <img src="DA6BAB6C-210C-411A-82E0-B5D8D0B100B7.jpg" alt="Bedroom at Excelsior on Elizabeth in Surry Hills">
+      </div>
     </section>
   </main>
 
-  <footer><div class="footer-brand">Your Friend <span>&amp;</span> Neighbour</div><p><a href="index.html">View both apartments</a></p><p>Sydney, Australia</p></footer>
+  <footer>
+    <div class="footer-brand">Your Friend <span>&amp;</span> Neighbour</div>
+    <p><a href="index.html#stays">Public website &amp; both Sydney stays</a></p>
+    <p>Sydney, Australia</p>
+  </footer>
 </body>
 </html>
