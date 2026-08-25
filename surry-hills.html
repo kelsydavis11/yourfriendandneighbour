@@ -3,12 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Excelsior on Elizabeth | Your Friend & Neighbour</title>
+  <title>Excelsior on Elizabeth | Your Friend &amp; Neighbour</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Junicode:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="overrides.css?v=guest8">
+  <link rel="stylesheet" href="overrides.css?v=guest10">
+
+  <style>
+    #essentials, #guide, #stay-again { scroll-margin-top: 120px; }
+    .guest-stay-again{padding:72px 5vw;background:rgba(183,195,174,.22);border-top:1px solid var(--line);display:grid;grid-template-columns:.9fr 1.1fr;gap:7vw;align-items:start}
+    .guest-stay-again-copy{max-width:560px}.guest-stay-again-copy h2{margin-bottom:16px}.guest-stay-again-copy p:not(.eyebrow){margin:0;color:var(--body);font-size:14px;line-height:1.7;max-width:48ch}
+    .guest-stay-again-form{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px;max-width:620px}.guest-stay-again-form label{display:grid;gap:5px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    .guest-stay-again-form input[type=text],.guest-stay-again-form input[type=email]{width:100%;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:11px 0;font:inherit;outline:none}
+    .guest-stay-again-form .stay-again-note{grid-column:1/-1;margin:0;color:var(--body);font-size:12.5px;line-height:1.55}.guest-stay-again-form button{grid-column:1/-1;min-height:46px;padding:13px 22px;border:0;background:var(--ink);color:#fff;text-transform:uppercase;letter-spacing:.12em;font:500 11.5px "Jost",sans-serif;cursor:pointer}.guest-stay-again-form button:hover{background:#3E4A38}
+    @media(max-width:760px){.guest-stay-again{grid-template-columns:1fr;gap:28px;padding:52px 4vw}.guest-stay-again-form{grid-template-columns:1fr}.guest-stay-again-form .stay-again-note,.guest-stay-again-form button{grid-column:1}}
+  </style>
 </head>
 <body class="guest-page surry-hills-guest-page">
   <a class="promo-bar" href="https://links.eatclub.com.au/VXpTUVMaY2b" target="_blank" rel="noopener noreferrer">
@@ -20,29 +30,20 @@
   <header class="site-header guest-header">
     <a class="brand" href="index.html">Your Friend <span>&amp;</span> Neighbour</a>
     <nav aria-label="Guest navigation">
-      <a href="#guide">Eat &amp; drink</a>
-      <a href="#perks">Friend perks</a>
-      <a class="nav-cta" href="index.html#friend">Stay again</a>
+      <a href="#essentials">House manual</a>
+      <a href="#guide">Perks &amp; local favourites</a>
+      <a class="nav-cta" href="#stay-again">Stay again</a>
     </nav>
   </header>
 
   <main>
     <section class="guest-split-hero surry-split-hero" aria-label="Excelsior on Elizabeth guest guide">
-      <div class="guest-split-image">
-        <img src="846462E8-7C38-439E-BA54-2A30A4B643D7.jpg" alt="Excelsior on Elizabeth apartment in Surry Hills">
-      </div>
-      <div class="guest-split-copy">
-        <p class="eyebrow">Surry Hills</p>
-        <h1>Excelsior on Elizabeth</h1>
-        <p>Everything you need for your stay, kept easy to find.</p>
-      </div>
+      <div class="guest-split-image"><img src="846462E8-7C38-439E-BA54-2A30A4B643D7.jpg" alt="Excelsior on Elizabeth apartment in Surry Hills"></div>
+      <div class="guest-split-copy"><p class="eyebrow">Surry Hills</p><h1>Excelsior on Elizabeth</h1><p>Everything you need for your stay, kept easy to find.</p></div>
     </section>
 
     <section class="guest-quick-section" aria-labelledby="guest-help-heading">
-      <div class="guest-quick-heading">
-        <p class="eyebrow">During your stay</p>
-        <h2 id="guest-help-heading">What do you need?</h2>
-      </div>
+      <div class="guest-quick-heading"><div><p class="eyebrow">During your stay</p><h2 id="guest-help-heading">What do you need?</h2></div></div>
       <nav class="guest-quick-list" aria-label="Quick guest help">
         <a href="#wifi"><span aria-hidden="true">📶</span><strong>WiFi</strong></a>
         <a href="#keys"><span aria-hidden="true">🔑</span><strong>Keys &amp; door</strong></a>
@@ -50,106 +51,42 @@
         <a href="#facilities"><span aria-hidden="true">🏊</span><strong>Gym, pool &amp; sauna</strong></a>
         <a href="#laundry"><span aria-hidden="true">🧺</span><strong>Laundry</strong></a>
         <a href="#kitchen"><span aria-hidden="true">🍳</span><strong>Kitchen</strong></a>
-        <a href="#guide"><span aria-hidden="true">🍽️</span><strong>Eat &amp; drink</strong></a>
-        <a href="#perks"><span aria-hidden="true">★</span><strong>Friend perks</strong></a>
+        <a href="#guide"><span aria-hidden="true">🍽️</span><strong>Perks &amp; local favourites</strong></a>
       </nav>
     </section>
 
     <section class="guest-contact-strip" aria-label="Contact your host">
-      <div>
-        <p class="eyebrow">Questions or issues?</p>
-        <h2>Please get in touch while you're here.</h2>
-      </div>
+      <div><p class="eyebrow">Questions or issues?</p><h2>Please get in touch while you're here.</h2></div>
       <p>If anything isn't working as expected, or you have any questions at all, please message us directly through Airbnb or Booking.com, or call <a href="tel:+61422735797">+61 422 735 797</a>. We'd love the chance to fix it straight away.</p>
     </section>
 
-    <section class="guest-context-note" aria-label="About the apartment">
-      <div>
-        <p class="eyebrow">A quick note about the apartment</p>
-        <p>Excelsior on Elizabeth is personally managed rather than a serviced hotel apartment. We really appreciate guests treating it with care — and letting us know straight away if anything doesn't seem right so we can help.</p>
-      </div>
-    </section>
+    <section class="guest-context-note" aria-label="About the apartment"><div><p class="eyebrow">A quick note about the apartment</p><p>Excelsior on Elizabeth is personally managed rather than a serviced hotel apartment. We really appreciate guests treating it with care — and letting us know straight away if anything doesn't seem right so we can help.</p></div></section>
 
     <section id="wifi" class="wifi-card guest-wifi-card guest-wifi-card-compact">
-      <div>
-        <p class="eyebrow">WiFi</p>
-        <h2>Connect and settle in.</h2>
-      </div>
-      <div class="wifi-details">
-        <p><span>Network</span><strong>WiFi-5G-4E12</strong></p>
-        <p><span>Password</span><strong>Nic44QEd</strong></p>
-      </div>
+      <div><p class="eyebrow">WiFi</p><h2>Connect and settle in.</h2></div>
+      <div class="wifi-details"><p><span>Network</span><strong>WiFi-5G-4E12</strong></p><p><span>Password</span><strong>Nic44QEd</strong></p></div>
     </section>
 
     <section id="essentials" class="section guest-essential-section">
-      <div class="section-intro narrow guest-essential-intro">
-        <p class="eyebrow">House manual</p>
-        <h2>The things most worth knowing.</h2>
-        <p>Short, practical instructions for the apartment. If anything is unclear, message us and we'll help.</p>
-      </div>
-
+      <div class="section-intro narrow guest-essential-intro"><p class="eyebrow">House manual</p><h2>The things most worth knowing.</h2><p>Short, practical instructions for the apartment. If anything is unclear, message us and we'll help.</p></div>
       <div class="guest-manual-list">
-        <article id="keys" class="guest-manual-row">
-          <div class="guest-manual-icon" aria-hidden="true">🔑</div>
-          <div class="guest-manual-copy">
-            <h3>Keys &amp; door</h3>
-            <p><strong>Please don't use the top deadlock.</strong> It can become a little sticky once locked and isn't required.</p>
-            <p>Just use the <strong>regular lower door-handle lock</strong> when locking the apartment.</p>
-          </div>
-        </article>
-
-        <article id="tv" class="guest-manual-row">
-          <div class="guest-manual-icon" aria-hidden="true">📺</div>
-          <div class="guest-manual-copy">
-            <h3>TV &amp; Chromecast</h3>
-            <p>The TV has Chromecast so you can cast from streaming apps on your phone once you're connected to the apartment WiFi.</p>
-            <p><strong>The power button on the remote can be sticky.</strong> If it doesn't respond, use the physical power button behind the TV on the back left. The other remote buttons should work normally.</p>
-          </div>
-        </article>
-
-        <article id="facilities" class="guest-manual-row">
-          <div class="guest-manual-icon" aria-hidden="true">🏊</div>
-          <div class="guest-manual-copy">
-            <h3>Gym, pool &amp; sauna</h3>
-            <p>The gym, pool and sauna are <strong>open from 5am daily</strong>.</p>
-            <p>They're on the <strong>ground floor, to the right of the lifts as you approach</strong>.</p>
-          </div>
-        </article>
-
-        <article id="laundry" class="guest-manual-row">
-          <div class="guest-manual-icon" aria-hidden="true">🧺</div>
-          <div class="guest-manual-copy">
-            <h3>Laundry</h3>
-            <p>There is a washing machine in the apartment and a <strong>drying rack on the balcony</strong>.</p>
-          </div>
-        </article>
-
-        <article id="kitchen" class="guest-manual-row">
-          <div class="guest-manual-icon" aria-hidden="true">🍳</div>
-          <div class="guest-manual-copy">
-            <h3>Kitchen</h3>
-            <p>To light the gas stovetop, turn the relevant gas knob and <strong>hold down the black igniter button</strong> until the burner lights.</p>
-          </div>
-        </article>
+        <article id="keys" class="guest-manual-row"><div class="guest-manual-icon" aria-hidden="true">🔑</div><div class="guest-manual-copy"><h3>Keys &amp; door</h3><p><strong>Please don't use the top deadlock.</strong> It can become a little sticky once locked and isn't required.</p><p>Just use the <strong>regular lower door-handle lock</strong> when locking the apartment.</p></div></article>
+        <article id="tv" class="guest-manual-row"><div class="guest-manual-icon" aria-hidden="true">📺</div><div class="guest-manual-copy"><h3>TV &amp; Chromecast</h3><p>The TV has Chromecast so you can cast from streaming apps on your phone once you're connected to the apartment WiFi.</p><p><strong>The power button on the remote can be sticky.</strong> If it doesn't respond, use the physical power button behind the TV on the back left. The other remote buttons should work normally.</p></div></article>
+        <article id="facilities" class="guest-manual-row"><div class="guest-manual-icon" aria-hidden="true">🏊</div><div class="guest-manual-copy"><h3>Gym, pool &amp; sauna</h3><p>The gym, pool and sauna are <strong>open from 5am daily</strong>.</p><p>They're on the <strong>ground floor, to the right of the lifts as you approach</strong>.</p></div></article>
+        <article id="laundry" class="guest-manual-row"><div class="guest-manual-icon" aria-hidden="true">🧺</div><div class="guest-manual-copy"><h3>Laundry</h3><p>There is a washing machine in the apartment and a <strong>drying rack on the balcony</strong>.</p></div></article>
+        <article id="kitchen" class="guest-manual-row"><div class="guest-manual-icon" aria-hidden="true">🍳</div><div class="guest-manual-copy"><h3>Kitchen</h3><p>To light the gas stovetop, turn the relevant gas knob and <strong>hold down the black igniter button</strong> until the burner lights.</p></div></article>
       </div>
     </section>
 
     <section id="guide" class="section guest-guide-section surry-guide-section">
       <p class="eyebrow">Near Surry Hills</p>
-      <h2>Our local favourites</h2>
+      <h2>Perks &amp; local favourites</h2>
       <p class="guide-intro">The places we'd actually send friends staying here — from a $10 burger downstairs to some of our favourite date-night spots in Sydney.</p>
-
-      <div class="eatclub-guide-note">
-        <div><span aria-hidden="true">⚡</span><strong>Always check EatClub around here.</strong></div>
-        <p>Surry Hills is stacked with genuinely great venues on EatClub. These are our favourites regardless of whether they're discounted — the tags just flag the ones worth checking in the app before you head out.<br><strong>I promise I don't work for them — just a huge fan 😂</strong></p>
-        <a href="https://links.eatclub.com.au/VXpTUVMaY2b" target="_blank" rel="noopener noreferrer">Open EatClub →</a>
-      </div>
-
+      <div class="eatclub-guide-note"><div><span aria-hidden="true">⚡</span><strong>Always check EatClub around here.</strong></div><p>Surry Hills is stacked with genuinely great venues on EatClub. These are our favourites regardless of whether they're discounted — the tags just flag the ones worth checking in the app before you head out.<br><strong>I promise I don't work for them — just a huge fan 😂</strong></p><a href="https://links.eatclub.com.au/VXpTUVMaY2b" target="_blank" rel="noopener noreferrer">Open EatClub →</a></div>
       <div class="recommendation-grid local-recommendation-grid">
         <article><span>🍔 Burger · Downstairs</span><h3>The Famous</h3><p>Just downstairs on the corner of Elizabeth and Reservoir. Incredible smash-patty burger and it's only $10 — genuinely unheard of. No discount needed. Perfect chips too.</p></article>
         <article><span>🥐 Bakery · Coffee</span><h3>AP Bakery</h3><p>Insane pastries and baked goods, plus great coffee. There are a few locations now, but the flagship on Paramount Street is nearby and an absolute must-go.</p></article>
         <article><span>🍷 Wine bar · Date night</span><h3>Bar Copains</h3><p>Incredible wine bar with an amazing wine and tapas menu. Perfect for afternoon drinks or date night. Book if you want to avoid lining up, but it's worth it. Everything is delicious — our favourites are the bacon &amp; Comté tart and the whiting sandwich.</p></article>
-
         <article><span>☕ Coffee · Reservoir St</span><h3>Single O</h3><p>Famous for a reason. Usually a huge line, and the hype is real if you're a coffee addict. Right around the corner on Reservoir Street.</p></article>
         <article><span>🍛 Indian fusion · Any occasion</span><h3>Don't Tell Aunty</h3><a class="eatclub-tag" href="https://links.eatclub.com.au/VXpTUVMaY2b" target="_blank" rel="noopener noreferrer">⚡ EatClub</a><p>One of our all-time favourites — we go every few weeks. Great for dates, groups, a long lunch or a quick dinner, with fun interiors, excellent cocktails and consistently top-tier Indian food.</p></article>
         <article><span>🍸 Cocktails · Neighbourhood bar</span><h3>Rover</h3><a class="eatclub-tag" href="https://links.eatclub.com.au/VXpTUVMaY2b" target="_blank" rel="noopener noreferrer">⚡ EatClub</a><p>A great neighbourhood cocktail bar with a killer martini and a very good burger.</p></article>
@@ -159,20 +96,17 @@
       </div>
     </section>
 
-    <section id="perks" class="perks">
-      <p class="eyebrow">Friend perks</p>
-      <h2>A few useful extras</h2>
-      <div class="perk-links">
-        <a href="https://links.eatclub.com.au/VXpTUVMaY2b" target="_blank" rel="noopener noreferrer">EatClub — up to 50% off →</a>
-        <a href="index.html#friend">Become a friend &amp; stay direct →</a>
-      </div>
+    <section id="stay-again" class="guest-stay-again" aria-labelledby="stay-again-heading">
+      <div class="guest-stay-again-copy"><p class="eyebrow">Stay again</p><h2 id="stay-again-heading">Come back direct next time.</h2><p>Leave your details and we'll simply share access to book direct in future, with a better rate than the booking platforms. That's it — no newsletters, no spam and no constant offers.</p></div>
+      <form class="guest-stay-again-form">
+        <label>First name<input type="text" name="first_name" autocomplete="given-name" placeholder="Alex"></label>
+        <label>Email<input type="email" name="email" autocomplete="email" placeholder="alex@example.com"></label>
+        <p class="stay-again-note">By submitting, you're asking us to send you direct-booking access for a future stay. We won't add you to a general mailing list.</p>
+        <button type="button">Get direct booking access</button>
+      </form>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-brand">Your Friend <span>&amp;</span> Neighbour</div>
-    <p><a href="index.html">View both apartments</a></p>
-    <p>Sydney, Australia</p>
-  </footer>
+  <footer><div class="footer-brand">Your Friend <span>&amp;</span> Neighbour</div><p><a href="index.html">View both apartments</a></p><p>Sydney, Australia</p></footer>
 </body>
 </html>
